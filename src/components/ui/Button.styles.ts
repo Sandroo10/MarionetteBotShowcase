@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority"
 
 export const buttonStyles = cva(
-  "inline-flex min-h-11 items-center justify-center gap-2 border px-5 py-3 text-sm font-bold uppercase transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex min-h-11 items-center justify-center gap-2 border px-5 py-3 text-sm font-bold uppercase transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50",
   {
     variants: {
       intent: {

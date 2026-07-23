@@ -44,13 +44,13 @@ Vite will print the local URL in the terminal, normally `http://localhost:5173`.
 
 ## Configure the Discord Invite
 
-Open `src/data/site.ts` and replace:
+Create a local `.env` file from `.env.example` and set your Discord-provided OAuth2 install link:
 
-```ts
-inviteUrl: "PASTE_YOUR_DISCORD_BOT_INVITE_LINK_HERE"
+```dotenv
+VITE_DISCORD_INVITE_URL=https://discord.com/oauth2/authorize?client_id=YOUR_APPLICATION_ID
 ```
 
-Use the OAuth2 installation URL generated for your Discord application.
+The `.env` file is ignored by Git. This invite URL is safe to expose because it is used in the browser; never put the Discord bot token in this project or in a `VITE_` variable.
 
 ## Add the Trailer
 
@@ -93,7 +93,8 @@ npm run preview
 2. Select **Vite** if Vercel does not detect the framework automatically.
 3. Use `npm run build` as the build command.
 4. Use `dist` as the output directory.
-5. Deploy. No environment variables are currently required.
+5. In **Settings → Environment Variables**, add `VITE_DISCORD_INVITE_URL` with the Discord OAuth2 install link.
+6. Deploy or redeploy so Vercel includes the value in the website build.
 
 Every push to the production branch can trigger a new Vercel deployment. Add the generated website URL to the GitHub repository description after the first deployment.
 

@@ -1,8 +1,10 @@
 import { ListMusic, Radio, SkipForward, Volume2 } from "lucide-react"
 
+const inviteUrl = import.meta.env.VITE_DISCORD_INVITE_URL?.trim()
+
 export const siteConfig = {
   name: "Marionette MusicBox",
-  inviteUrl: "PASTE_YOUR_DISCORD_BOT_INVITE_LINK_HERE",
+  inviteUrl,
   trailer: {
     webm: "/videos/marionette-trailer.webm",
     mp4: "/videos/marionette-trailer.mp4",

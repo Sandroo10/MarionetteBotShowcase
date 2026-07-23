@@ -4,6 +4,8 @@ import { heroStyles } from "./compcss/hero-section/HeroSection.styles"
 import { ButtonLink } from "./ui/Button"
 
 export function HeroSection() {
+  const isInviteConfigured = Boolean(siteConfig.inviteUrl)
+
   return (
     <section id="top" className={heroStyles.root()} aria-labelledby="hero-title">
       <img className={heroStyles.image()} src="/images/marionette-hero.png" alt="Fan art of the Marionette beside an old music box in a dark pizzeria" />
@@ -17,7 +19,7 @@ export function HeroSection() {
             A fan-made Discord music bot built for shared queues, late-night sessions, and one more song before 6 AM.
           </p>
           <div className={heroStyles.actions()}>
-            <ButtonLink href={siteConfig.inviteUrl} target="_blank" rel="noreferrer">
+            <ButtonLink href={siteConfig.inviteUrl} target={isInviteConfigured ? "_blank" : undefined} rel={isInviteConfigured ? "noreferrer" : undefined} aria-disabled={!isInviteConfigured} title={isInviteConfigured ? undefined : "Discord invite link is not configured"}>
               <Bot size={18} aria-hidden="true" /> Add to Discord
             </ButtonLink>
             <ButtonLink href="#trailer" intent="ghost">
