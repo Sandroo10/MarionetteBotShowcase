@@ -9,6 +9,6 @@ export const trailerStyles = {
   meta: cva("mt-7 grid max-w-sm grid-cols-2 border-l border-t border-white/10 text-[11px] uppercase text-ash"),
   metaItem: cva("border-b border-r border-white/10 p-3"),
   frame: cva("relative aspect-video overflow-hidden border border-white/20 bg-black shadow-[12px_12px_0_rgba(109,59,120,0.16)]"),
-  video: cva("size-full object-cover"),
+  video: cva("size-full bg-black object-contain"),
   corner: cva("pointer-events-none absolute left-3 top-3 border border-alarm bg-black/75 px-3 py-2 text-[10px] font-bold uppercase text-alarm"),
 }

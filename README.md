@@ -11,7 +11,7 @@ The project currently focuses on presentation: it introduces the bot, displays i
 - Full-screen, responsive Marionette hero experience
 - Animated navigation cue with smooth section scrolling
 - Discord bot command showcase
-- WebM and MP4 trailer support
+- Included WebM and MP4 bot demonstration trailer
 - Centralized Discord invite URL
 - Accessible navigation and reduced-motion support
 - Mobile and desktop layouts
@@ -117,7 +117,6 @@ src/
 ## Planned Work
 
 - Add the final Discord bot invite URL
-- Add the gameplay-style bot trailer
 - Add live bot status or server statistics
 - Add links for support, documentation, and source code
 - Connect future interactive sections as the bot grows
